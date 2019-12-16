@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "183117932721",
+    "firebase_url": "https://lig2-c0262.firebaseio.com",
+    "project_id": "lig2-c0262",
+    "storage_bucket": "lig2-c0262.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183117932721:android:bdba90c6133f6069e25a90",
+        "android_client_info": {
+          "package_name": "thesis.nars.lig"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183117932721-cslc14d7g77jakkli84oo59nf4c44e3l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "thesis.nars.lig",
+            "certificate_hash": "194247ad95b3820bb189f1a5702b92906b61f52c"
+          }
+        },
+        {
+          "client_id": "183117932721-plh6ilkr83v4qik1gs87s7qb2ls0jjad.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvSgG9Dow6b0ITehHH3yqnpm3EmtLAjCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183117932721-plh6ilkr83v4qik1gs87s7qb2ls0jjad.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
