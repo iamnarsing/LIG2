@@ -79,12 +79,34 @@ public class SignupActivity extends AppCompatActivity{
 
 
         username = e1.getText().toString();
+        password = e2.getText().toString();
 
         if (usrname.getText().toString().equals("")  || pwd.getText().toString().equals("")) {
             er1.setVisibility(View.VISIBLE);
             er2.setVisibility(View.VISIBLE);
+            return;
         }
-        else {
+        if (username.length()>16) {
+            er1.setVisibility(View.VISIBLE);
+            er2.setVisibility(View.VISIBLE);
+            return;
+        }
+        if (password.length()>16){
+            er1.setVisibility(View.VISIBLE);
+            er2.setVisibility(View.VISIBLE);
+            return;
+        }
+        if (username.length()<8){
+            er1.setVisibility(View.VISIBLE);
+            er2.setVisibility(View.VISIBLE);
+            return;
+        }
+        if (password.length()<8){
+            er1.setVisibility(View.VISIBLE);
+            er2.setVisibility(View.VISIBLE);
+            return;
+        }
+//        else {
             auth.createUserWithEmailAndPassword(username + "@gmail.com" ,e2.getText().toString())
                     .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -116,6 +138,6 @@ public class SignupActivity extends AppCompatActivity{
                         }
                     });
 
-        }
+//        }
     }
 }

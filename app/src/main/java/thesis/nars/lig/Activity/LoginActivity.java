@@ -47,6 +47,7 @@ public class LoginActivity extends AppCompatActivity {
     private SharedPreferences sharedPreferences;
     private DatabaseReference dataNode;
     private String username;
+    private String password;    
 
     @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -79,12 +80,34 @@ public class LoginActivity extends AppCompatActivity {
             EditText pwd = (EditText) findViewById(R.id.etPassword);
 
             username = e1.getText().toString();
+            password = e2.getText().toString();
 
             if (usrname.getText().toString().equals("")  || pwd.getText().toString().equals("")) {
                 er1.setVisibility(View.VISIBLE);
                 er2.setVisibility(View.VISIBLE);
+                return;
             }
-            else {
+            if (username.length()>16) {
+                er1.setVisibility(View.VISIBLE);
+                er2.setVisibility(View.VISIBLE);
+                return;
+            }
+            if (password.length()>16){
+                er1.setVisibility(View.VISIBLE);
+                er2.setVisibility(View.VISIBLE);
+                return;
+            }
+            if (username.length()<8){
+                er1.setVisibility(View.VISIBLE);
+                er2.setVisibility(View.VISIBLE);
+                return;
+            }
+            if (password.length()<8){
+                er1.setVisibility(View.VISIBLE);
+                er2.setVisibility(View.VISIBLE);
+                return;
+            }
+//            else {
 
                 auth.signInWithEmailAndPassword(username + "@gmail.com",e2.getText().toString())
                         .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -160,6 +183,6 @@ public class LoginActivity extends AppCompatActivity {
                             }
 
                         });
-            }
+//            }
         }
         }
